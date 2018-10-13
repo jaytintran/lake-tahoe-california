@@ -78,7 +78,7 @@ Class & Id Selectors
 	background: #434a52;
 	padding: 18% 24%;
 	border-top: 10px solid #ffa949;
-	margin: 3.75em 0 6.25em;
+	margin: 3.75em 0 3em;
 	text-align: center;
 	background: center / cover url('../img/bear.jpg');
 	box-shadow: 10px 10px 50px #444;
@@ -94,7 +94,7 @@ Class & Id Selectors
 	font-size: 1.25em;
 	border-bottom: 3px solid;
 	padding: 0 10px 3px;
-	margin-top: 20px;
+	margin: 20px 0;
 	display: inline-block;
 }
 
@@ -125,17 +125,18 @@ Class & Id Selectors
 }
 
 #primary-content {
+	text-align: center;
 	margin: 72px 0;
 }
 
 #secondary-content {
-	padding: 6em 0;
+	padding: 4em 0;
 	border-bottom: 2px solid lightgray;
 }
 
 #primary-content,
 #secondary-content {
-	width: 60%;
+	width: 70%;
 	max-width: 960px;
 	margin: auto;
 }
@@ -205,3 +206,67 @@ Floats Clear-fix
 	display: table;
 	clear: both;
 } 
+
+/* 
+
+Media Queries
+
+ */
+@media only screen and (max-width: 1024px) {
+    #primary-content, 
+    #secondary-content {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+	/* Header */
+
+	h1 {
+		font-size: 4rem;
+		line-height: 1.1;
+	}
+	#main-header {
+		max-height: 380px;
+		padding: 50px 25px 0;
+	}
+	#title {
+		font-size: 1rem;
+		border: none;
+	}
+	#arrow {
+		display: none;
+	}
+
+	/* Primary Content */
+
+	#primary-content,
+	#secondary-content {
+		width: 100%;
+		padding: 20px;
+		border-top: none;
+	}
+	#intro {
+		font-size: 0.9rem;
+	}
+	.wildlife {
+		padding: 10% 12%;
+		margin: 30px 0 40px;
+	}
+
+	/* Secondary Content */
+
+	#resorts, 
+	#tips {
+		float: none;
+		display: block;
+		width: 100%;
+	}
+
+	/* Footer */
+
+	#main-footer {
+		padding-top: 20px 0;
+	}
+
+}
