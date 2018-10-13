@@ -1,5 +1,19 @@
 /* 
 
+Web Fonts
+
+ */
+@font-face {
+	font-family: 'Abolition Regular';
+	src: url('../fonts/abolition-regular-webfont.eot');	
+	src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/abolition-regular-webfont.woff') format('woff'),
+		 url('../fonts/abolition-regular-webfont.ttf') format('truetype');	
+}
+
+
+/* 
+
 Type Seletors
 
  */
@@ -13,12 +27,18 @@ body {
 	font: normal 1em/1.5 'Helvetica Neune', Helvetica, Arial, sans-serif;
 }
 
+h1, h2 {
+	font-family: 'Abolition Regular', 'Helvetica Neune', Helvetica, Arial, sans-serif;
+}
+
 h1 {
 	font-size: 5rem;	/* 90/16 (px) = 5.625 (em) */
 	color: rgb(255, 255, 255);
 	text-transform: uppercase;
 	font-weight: normal;
 	line-height: 1.3;
+	text-shadow: 5px 8px 10px #111;
+	margin: 25px 0 0;
 }
 
 h2 {
@@ -61,6 +81,13 @@ Class & Id Selectors
 	margin: 3.75em 0 6.25em;
 	text-align: center;
 	background: center / cover url('../img/bear.jpg');
+	box-shadow: 10px 10px 50px #444;
+	border-radius: 50px 10px;
+/* 	border-radius: 50px 10px 50px 10px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 50px; */
 }
 
 .callout {
@@ -74,6 +101,7 @@ Class & Id Selectors
 .featured-photo {
 	max-width: 100%;
 	margin-bottom: 24px;
+	border-radius: 10px;
 }
 
 #main-header {
@@ -82,12 +110,18 @@ Class & Id Selectors
 	margin-bottom: 3em;
 	text-align: center;
 	height: 600px;
-	background: center bottom / cover no-repeat url('../img/mountains.jpg') #ffa949;
+	background: linear-gradient(#ffa949, transparent 50%),
+				linear-gradient(0deg, #fff, transparent 80%),
+				center bottom / cover no-repeat url('../img/mountains.jpg') #ffa949;
 }
 
 #title {
 	color: white;
 	font-size: 1.625rem;	/* 26/16 (px) = 1.625 (em) */
+	letter-spacing: .065em;
+	font-weight: 200;
+	border-bottom: 2px solid;
+	padding-bottom: 1rem;
 }
 
 #primary-content {
@@ -114,6 +148,7 @@ Class & Id Selectors
 
 #arrow {
 	width: 5%;
+	margin-top: 100px;
 }
 
 #resorts,#tips {
